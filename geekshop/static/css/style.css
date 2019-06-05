@@ -1,0 +1,260 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color:#f7f7f7;
+}
+.container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    border-bottom: 1px solid #b5b7ba;
+    background-color: #eaeaea; 
+    background-image: url('img/wp3396065.jpg');
+    margin: 0 auto;
+    height: 60px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.logo img {
+    margin-left: 15px;
+    width: 190px;
+    float: left;
+}
+
+
+.menu {
+    float: right;
+}
+.menu li {
+    margin-top: 30;
+    width: 130px;
+    height: 30px;
+    font-family: fantasy;
+    font-size: 30px;
+    list-style-type: none;   
+    text-align: left;
+    padding-top: 10px;
+    padding-right: 20px;
+    color: darkslategrey;
+    background-color: none;
+    display: inline-block;
+    overflow: hidden
+}
+.menu li a {
+    color:darkslategrey;
+    text-decoration-line: none;
+    display: block;
+    width: 200px;
+    height: 40px;
+}
+
+.menu li a:hover {
+    color:darkred;
+}
+
+
+
+.content {
+    margin: 0 auto;
+    padding-top: 20px;
+    min-height: calc(100vh - 180px); 
+}
+
+.items{
+    position: relative;
+    top: 10 px;
+    left: 100 px;
+    float: left;
+    margin: 20px;
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #eaeaea;
+    overflow: hidden;
+    
+} 
+
+.short {
+}
+.long {
+    margin-top: 50px;
+    margin-left: 20px;
+    clear: both;
+}
+.short p {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+    text-align: justify;
+    margin: 10px;
+    margin-bottom: 75px;   
+    overflow: hidden;
+    }
+
+.long p {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: justify;
+    
+}
+.ulist {
+    color: #545352;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    list-style: none;
+}
+.ulist::before {
+    content: "\1F44D";
+}
+.small {
+    width: 200px;
+    height: 200px;
+    outline: 1px solid #666; /* Параметры рамки */    
+    /* border: 1px solid #444;
+    border-radius: 10px;
+    box-shadow:5px 5px 10px #2B1015;
+    */
+}
+
+.small:hover {
+    outline: none;
+    
+}
+.img_main {
+    width: 225px;
+    height: 225px;
+    border: 1px solid #333; 
+    margin-right: 20px;
+}
+
+
+.long p:first-letter,
+.short p:first-letter {
+    font-size: 20px;
+    color:darkred;
+}
+
+.productcharacteristic {
+    border: 1px solid #000;
+    width: 100%;
+    height: 200px;
+    border-spacing: 1px;
+    border-collapse: collapse;
+}
+
+.productcharacteristic td {
+    border: 1px solid #aaa ;
+    width: 20%;
+    vertical-align: top;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    border: 1px solid #cccccc; 
+    border-radius: 3px;   
+    background: #ffffff !important; 
+    outline: none; 
+    height: 20px; 
+    width: 305px;
+    color: #313131; 
+    font-size: 16px;
+    font-family: Tahoma;
+}
+input[type="email"]:focus {
+    background: #eeeeee !important; 
+    color: green; 
+}
+
+input[type="text"]:enabled,
+textarea:enabled {
+    text-transform: capitalize;
+}
+textarea {
+    overflow: auto;
+	/*resize: none;            запрещает растяжение окна */
+	width: 300px;
+	height: 120px;
+	background: #ffffff;
+	border: 1px solid #cecece;
+	border-radius: 3px 3px 3px 0;
+	padding: 5px 5px 5px 5px;
+    font-size: 16px;
+    font-family: Tahoma;
+}
+input[type="submit"],
+input[type="reset"] {
+	width: 150px;
+	height: 28px;
+	background: #efefef;
+}
+
+.map {
+    align-content: center;
+}
+
+.button_buy {
+    width: 250px;
+	height: 45px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(64,199,129);
+    box-shadow: 0 -3px rgb(53,167,110) inset;  transition: 0.2s;
+} 
+
+.button_buy:hover {
+    background: rgb(53, 167, 110); 
+}
+
+.button_buy:active {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}
+.product{
+    margin: 30px;
+    float: left
+}
+.product h3 {
+    text-align: center;
+}
+.product a{
+    align-self: center;
+}
+.footer {
+    margin-top: 10px;
+    color: floralwhite;
+    text-align: right;
+    height: 30px;
+    background-color: #aaa;
+    padding-right: 10px;
+    padding-top: 5px;
+    width: 100%;
+    
+}
