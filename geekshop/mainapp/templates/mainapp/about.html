@@ -1,0 +1,19 @@
+{% extends 'mainapp/master.html' %}
+
+{% block page_title %}
+About page
+{% endblock %}
+
+{% block page_content %}
+    <div class="page__content">
+        <h1 class="page__title">
+            О проекте
+        </h1>
+        <div class="branding">
+            <img src="" alt="" class="branding__background">
+            <span class="branding__snippet">
+                {{ description }}
+            </span>
+        </div>
+    </div>
+{% endblock %}

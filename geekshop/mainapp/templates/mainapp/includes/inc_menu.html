@@ -1,0 +1,55 @@
+{% load staticfiles %}
+{% csrf_token %}
+<header class="page__header">
+    <nav class="page__navigation">
+        <ul class="navigation-list">
+            <li class="navigation-list__item">
+                <span class="navigation-list__item-text">
+                    Главная
+                </span>
+                <a href="{% url 'main:index' %}" class="navigation-list__item-link">
+                </a>
+            </li>
+            <li class="navigation-list__item">
+                <span class="navigation-list__item-text">
+                    Продукты
+                </span>
+                <a href="{% url 'products:index' %}" class="navigation-list__item-link">
+                </a>
+            </li>
+            <li class="navigation-list__item">
+                <span class="navigation-list__item-text">
+                    О проекте
+                </span>
+                <a href="/about/" class="navigation-list__item-link">
+                </a>
+            </li>
+            <li class="navigation-list__item">
+                <span class="navigation-list__item-text">
+                    Контакты
+                </span>
+                <a href="/contacts/" class="navigation-list__item-link">
+                </a>
+            </li>
+			{% if user.is_authenticated %}
+			  <li>
+			    <a href="{% url 'auth:edit' %}">
+			      {{ user.first_name|default:'Пользователь' }}
+			    </a>
+			  </li>
+			{% endif %}
+			{% if user.is_superuser %}
+			  <li>
+			    <a href="{% url 'admin:users' %}">админка</a>
+			  </li>
+			{% endif %}
+			<li>
+			  {% if user.is_authenticated %}
+			    <a href="{% url 'auth:logout' %}">выйти</a>
+			  {% else %}
+			    <a href="{% url 'auth:login' %}">войти</a>
+			  {% endif %}
+			</li>
+        </ul>
+    </nav>
+</header>
